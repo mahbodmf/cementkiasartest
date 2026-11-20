@@ -1,0 +1,177 @@
+{
+  "version": "1.0.0",
+  "plant": "کارخانه سیمان کیاسر",
+  "standardReference": "استاندارد ملی ایران ISIRI 7873 و الزامات ISO 50001:2018 بند 6.3",
+  "lastUpdated": "1403/06/15",
+  "equipmentBenchmarks": [
+    {
+      "tag": "KL.100.431",
+      "name": "کوره دوار خط پخت (Rotary Kiln)",
+      "department": "خط پخت و کلینکرسازی",
+      "departmentCode": "clinker_production",
+      "isSEU": true,
+      "energyCarrier": "گاز طبیعی و برق",
+      "nominalCapacity": "2000 t/d clinker",
+      "nominalElectricalPowerKw": 450,
+      "benchmarkEfficiencyPct": 68.0,
+      "warningThresholdPct": 62.0,
+      "criticalEfficiencyPct": 58.0,
+      "secThermalBenchmarkKcalKg": 780.0,
+      "secElectricalBenchmarkKwhTon": 22.5,
+      "lossFactors": [
+        "اتلاف حرارتی از بدنه و پوسته کوره (Shell Radiation & Convection Loss)",
+        "حرارت گازهای خروجی اگزاست برج پیش‌گرمکن",
+        "هوای کاذب ورودی از درزگیرهای طوقه ورودی و خروجی",
+        "تلفات احتراق ناقص و نسوخته‌های مشعل اصلی"
+      ],
+      "correctiveAction": "تعویض آجرهای نسوز فرسوده با عایق سبک راندمان بالا، آب‌بندی درزگیرهای گرافیتی و بهینه‌سازی نسبت هوا به سوخت مشعل",
+      "monitoringFrequency": "پیوسته و روزانه"
+    },
+    {
+      "tag": "CC.100.441",
+      "name": "خنک‌کن کلینکر گریت کولر (Grate Cooler)",
+      "department": "خط پخت و کلینکرسازی",
+      "departmentCode": "clinker_production",
+      "isSEU": true,
+      "energyCarrier": "برق",
+      "nominalCapacity": "2200 t/d clinker",
+      "nominalElectricalPowerKw": 680,
+      "benchmarkEfficiencyPct": 75.0,
+      "warningThresholdPct": 70.0,
+      "criticalEfficiencyPct": 65.0,
+      "secElectricalBenchmarkKwhTon": 7.5,
+      "lossFactors": [
+        "افت راندمان رکوپراسیون هوای ثانویه و ثالثیه به کوره و کلساینر",
+        "سایش صفحات گریت پلیت و فرار هوای سرد بدون خنک‌سازی موثر",
+        "عدم تعادل توزیع ضخامت بستر کلینکر بر روی گریت‌ها"
+      ],
+      "correctiveAction": "تنظیم شیب بستر کلینکر، تعویض پلیت‌های معیوب و کالیبراسیون اتوماتیک فشار دور فن‌های ۶ گانه هوادهی",
+      "monitoringFrequency": "روزانه"
+    },
+    {
+      "tag": "BM.010.531",
+      "name": "آسیاب گلوله‌ای سیمان خط ۱ (Ball Mill - 2x1400 kW)",
+      "department": "آسیاب و بسته‌بندی سیمان",
+      "departmentCode": "cement_grinding",
+      "isSEU": true,
+      "energyCarrier": "برق",
+      "nominalCapacity": "85 t/h",
+      "nominalElectricalPowerKw": 2800,
+      "benchmarkEfficiencyPct": 78.0,
+      "warningThresholdPct": 72.0,
+      "criticalEfficiencyPct": 66.0,
+      "secElectricalBenchmarkKwhTon": 34.0,
+      "lossFactors": [
+        "سایش و انسداد شکاف‌های دیافراگم بین اتاقک‌های ۱ و ۲",
+        "نامتعادل بودن توزیع دانه‌بندی شارژ گلوله‌های فولادی",
+        "راندمان هوادهی نامناسب بگ‌فیلتر و تهویه داخلی آسیاب"
+      ],
+      "correctiveAction": "بهینه‌سازی منحنی توزیع گلوله‌ها بر مبنای سرتینگ دوره‌ای، تعویض شکاف‌های دیافراگم و کنترل دور سپراتور",
+      "monitoringFrequency": "شیفتی و روزانه"
+    },
+    {
+      "tag": "BM.020.532",
+      "name": "آسیاب گلوله‌ای سیمان خط ۲ (Ball Mill - 2200 kW)",
+      "department": "آسیاب و بسته‌بندی سیمان",
+      "departmentCode": "cement_grinding",
+      "isSEU": true,
+      "energyCarrier": "برق",
+      "nominalCapacity": "75 t/h",
+      "nominalElectricalPowerKw": 2200,
+      "benchmarkEfficiencyPct": 76.0,
+      "warningThresholdPct": 70.0,
+      "criticalEfficiencyPct": 64.0,
+      "secElectricalBenchmarkKwhTon": 35.5,
+      "lossFactors": [
+        "نوسان رطوبت مواد ورودی و کلینکر گرم",
+        "تلفات مکانیکی یاتاقان‌های بابیتی و چرخدنده‌های گیربکس",
+        "افت راندمان سپراتور هوایی نسل دوم"
+      ],
+      "correctiveAction": "کاهش دمای کلینکر ورودی، نوسازی سیستم روانکاری یاتاقان‌ها و بهینه‌سازی جریان بازگشتی ریجکت",
+      "monitoringFrequency": "شیفتی و روزانه"
+    },
+    {
+      "tag": "RM.020.321",
+      "name": "آسیاب غلطکی عمودی مواد خام (VRM - 1500 kW)",
+      "department": "آسیاب مواد خام",
+      "departmentCode": "raw_grinding",
+      "isSEU": true,
+      "energyCarrier": "برق و گاز داغ",
+      "nominalCapacity": "180 t/h",
+      "nominalElectricalPowerKw": 1500,
+      "benchmarkEfficiencyPct": 86.0,
+      "warningThresholdPct": 82.0,
+      "criticalEfficiencyPct": 76.0,
+      "secElectricalBenchmarkKwhTon": 16.2,
+      "lossFactors": [
+        "سایش لاینرهای غلطک و سینی سایش (Table & Roller Liners)",
+        "ورود هوای کاذب از سیستم آب‌بندی درها و اتصالات بدنه",
+        "ارتعاشات ناشی از دانه‌بندی نامناسب سنگ‌آهک ورودی"
+      ],
+      "correctiveAction": "اجرای جوشکاری سخت‌کاری سطحی (Hardfacing) دوره‌ای لاینرها، آب‌بندی پوسته و تنظیم فشار هیدرولیک غلطک‌ها",
+      "monitoringFrequency": "روزانه"
+    },
+    {
+      "tag": "FN.010.331",
+      "name": "فن مکنده اصلی اگزاست کوره و آسیاب (ID Fan - 1600 kW)",
+      "department": "آسیاب مواد و خط پخت",
+      "departmentCode": "clinker_production",
+      "isSEU": true,
+      "energyCarrier": "برق",
+      "nominalCapacity": "415,000 m³/h",
+      "nominalElectricalPowerKw": 1600,
+      "benchmarkEfficiencyPct": 85.0,
+      "warningThresholdPct": 80.0,
+      "criticalEfficiencyPct": 74.0,
+      "secElectricalBenchmarkKwhTon": 6.8,
+      "lossFactors": [
+        "افت فشار دریچه‌های دمپر مکانیکی ورودی به جای کنترل دور الکتروموتور",
+        "نشت گاز داغ و هوای کاذب در کانال‌های ارتباطی قبل از فن",
+        "عدم بالانس پروانه ناشی از رسوب‌گذاری غبار کلینکر"
+      ],
+      "correctiveAction": "نصب درایو فرکانس متغیر (VFD) سرعت متغیر و تمیزکاری دوره‌ای پروانه با دمش هوا",
+      "monitoringFrequency": "پیوسته آنلاین"
+    },
+    {
+      "tag": "BL.130.611",
+      "name": "ایستگاه کمپرسورخانه و شبکه توزیع هوای فشرده",
+      "department": "یوتیلیتی و تاسیسات مرکزی",
+      "departmentCode": "utilities_quarry",
+      "isSEU": true,
+      "energyCarrier": "برق",
+      "nominalCapacity": "120 m³/min @ 7.5 bar",
+      "nominalElectricalPowerKw": 750,
+      "benchmarkEfficiencyPct": 75.0,
+      "warningThresholdPct": 65.0,
+      "criticalEfficiencyPct": 55.0,
+      "secElectricalBenchmarkKwhTon": 3.8,
+      "lossFactors": [
+        "نشتی در اتصالات لوله‌کشی، شیلنگ‌ها و فیتینگ‌های پنوماتیک در بخش‌های بگ‌فیلتر و بارگیرخانه",
+        "افت فشار در درایرهای جذبی و فیلترهای میکرونی خط اصلی",
+        "کارکرد بدون بار (Unload) طولانی‌مدت اسکرو کمپرسورها"
+      ],
+      "correctiveAction": "اجرای پایش دوره‌ای التراسونیک نشت‌یابی صوتی، تعویض تله‌های میعانات فرسوده و یکپارچه‌سازی با سیستم کنترل مرکزی توالی کمپرسورها",
+      "monitoringFrequency": "هفتگی"
+    },
+    {
+      "tag": "CR.001.110",
+      "name": "سنگ‌شکن چکشی ثانویه مواد اولیه (Crusher)",
+      "department": "معادن و سنگ‌شکن",
+      "departmentCode": "utilities_quarry",
+      "isSEU": false,
+      "energyCarrier": "برق",
+      "nominalCapacity": "600 t/h",
+      "nominalElectricalPowerKw": 800,
+      "benchmarkEfficiencyPct": 88.0,
+      "warningThresholdPct": 82.0,
+      "criticalEfficiencyPct": 75.0,
+      "secElectricalBenchmarkKwhTon": 1.4,
+      "lossFactors": [
+        "سایش چکش‌ها و صفحه ضدضربه (Impact Plate)",
+        "کارکرد بدون بار در زمان توقف کامیون‌های معدن"
+      ],
+      "correctiveAction": "تعویض منظم چکش‌ها با متریال با کربن و کروم بالا و اینترلاک هوشمند نوار تغذیه با فیدر ورودی",
+      "monitoringFrequency": "هفتگی"
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+{
+  "systemTitle": "پیکربندی شاخص‌های کلیدی راندمان و بنچ‌مارک‌های مصرف انرژی (ISO 50001:2018 - بند 6.3)",
+  "standardReference": "استاندارد ملی ایران ISIRI 7873 (معیار مصرف انرژی در تولید سیمان)",
+  "plantName": "کارخانه سیمان کیاسر",
+  "baselineYear": 1400,
+  "defaultBenchmarks": {
+    "kilnEfficiencyPct": {
+      "id": "kiln_efficiency",
+      "direction": "higher_is_better",
+      "target": 68.2,
+      "warningThreshold": 62.0,
+      "criticalThreshold": 58.0,
+      "unit": "درصد (%)",
+      "description": "راندمان حرارتی-ترمودینامیکی کارکرد کوره دوار پخت کلینکر"
+    },
+    "cementMillEfficiencyPct": {
+      "id": "mill_efficiency",
+      "direction": "higher_is_better",
+      "target": 72.8,
+      "warningThreshold": 68.0,
+      "criticalThreshold": 63.0,
+      "unit": "درصد (%)",
+      "description": "راندمان فرآیندی آسیاب‌های گلوله‌ای سیمان و سپراتور"
+    },
+    "secThermalKcalKg": {
+      "id": "sec_thermal",
+      "direction": "lower_is_better",
+      "target": 780.0,
+      "warningThreshold": 820.0,
+      "criticalThreshold": 860.0,
+      "unit": "kcal/kg clinker",
+      "description": "مصرف ویژه انرژی حرارتی خط پخت کلینکر (SEC Thermal)"
+    },
+    "secElectricalKwhTon": {
+      "id": "sec_electrical",
+      "direction": "lower_is_better",
+      "target": 102.0,
+      "warningThreshold": 108.0,
+      "criticalThreshold": 115.0,
+      "unit": "kWh/ton cement",
+      "description": "مصرف ویژه انرژی الکتریکی کل کارخانه به ازای هر تن سیمان (SEC Electrical)"
+    },
+    "feedToClinkerRatio": {
+      "id": "feed_clinker_ratio",
+      "direction": "lower_is_better",
+      "target": 1.60,
+      "warningThreshold": 1.63,
+      "criticalThreshold": 1.65,
+      "unit": "ton feed / ton clinker",
+      "description": "ضریب تبدیل خوراک کوره به کلینکر خروجی"
+    },
+    "clinkerToCementRatio": {
+      "id": "clinker_cement_ratio",
+      "direction": "lower_is_better",
+      "targetType2": 0.88,
+      "targetPuzzolanic": 0.72,
+      "target": 0.82,
+      "warningThreshold": 0.85,
+      "criticalThreshold": 0.88,
+      "unit": "ton clinker / ton cement",
+      "description": "ضریب کلینکر به سیمان (Clinker Factor) در انواع گریدهای تولیدی"
+    },
+    "operatingCapacityFactorPct": {
+      "id": "capacity_factor",
+      "direction": "higher_is_better",
+      "target": 90.0,
+      "warningThreshold": 80.0,
+      "criticalThreshold": 70.0,
+      "unit": "درصد (%)",
+      "description": "نرخ بهره‌برداری از ظرفیت اسمی کارخانه"
+    }
+  },
+  "statusCategories": {
+    "optimal": {
+      "label": "مطلوب",
+      "badge": "badge-success",
+      "colorClass": "text-emerald-400 bg-emerald-950/60 border-emerald-800",
+      "description": "عملکرد در محدوده بهترین تجارب جهانی (BAT) و بنچ‌مارک استاندارد"
+    },
+    "moderate": {
+      "label": "متوسط",
+      "badge": "badge-info",
+      "colorClass": "text-yellow-400 bg-yellow-950/60 border-yellow-800",
+      "description": "عملکرد قابل قبول با پتانسیل متوسط جهت بهبود و ارتقای راندمان"
+    },
+    "needs_improvement": {
+      "label": "نیازمند بهبود",
+      "badge": "badge-warning",
+      "colorClass": "text-amber-400 bg-amber-950/60 border-amber-800",
+      "description": "عملکرد پایین‌تر از هدف مصوب کارگروه انرژی با تلفات قابل توجه"
+    },
+    "critical": {
+      "label": "بحرانی",
+      "badge": "badge-danger",
+      "colorClass": "text-rose-400 bg-rose-950/60 border-rose-800",
+      "description": "اتلاف انرژی شدید نیازمند مداخله فوری نت، فرآیند و تدوین پروژه EnOP"
+    }
+  },
+  "departmentWeights": [
+    {
+      "code": "clinker_production",
+      "name": "خط پخت و کوره دوار",
+      "thermalSharePct": 92.5,
+      "electricalSharePct": 38.0,
+      "priority": 1
+    },
+    {
+      "code": "cement_grinding",
+      "name": "آسیاب و بسته‌بندی سیمان",
+      "thermalSharePct": 0.0,
+      "electricalSharePct": 36.5,
+      "priority": 2
+    },
+    {
+      "code": "raw_grinding",
+      "name": "آسیاب مواد خام",
+      "thermalSharePct": 7.5,
+      "electricalSharePct": 18.0,
+      "priority": 3
+    },
+    {
+      "code": "utilities_quarry",
+      "name": "تاسیسات، هوای فشرده و معادن",
+      "thermalSharePct": 0.0,
+      "electricalSharePct": 7.5,
+      "priority": 4
+    }
+  ]
+}

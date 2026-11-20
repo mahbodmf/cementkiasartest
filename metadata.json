@@ -1,0 +1,6 @@
+{
+  "name": "Cement Plant EnMS & Production Dashboard",
+  "description": "Comprehensive Industrial Energy Management System (EnMS) and Production Monitoring Dashboard for cement manufacturing with 5-sheet relational data, Looker Studio controls, CUSUM analytics, and department breakdown.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

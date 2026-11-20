@@ -1,0 +1,309 @@
+{
+  "keyPersonnel": [
+    {
+      "id": "kp-1",
+      "role": "اپراتورهای ارشد اتاق کنترل خط پخت (CCR Kiln Operators)",
+      "department": "دپارتمان خط پخت و کوره",
+      "affectedSeu": "کوره دوار (431.KL.100) و مشعل اصلی و کلساینر",
+      "energyImpact": "کنترل مصرف حرارتی کوره (هدف: ۸۸۸ kcal/kg.cl)، تنظیم نسبت هوا به سوخت، کنترل دمای منطقه پخت و پیش‌گرمکن",
+      "requiredCompetence": "گواهینامه صلاحیت راهبری کوره دوار، دانش کنترل احتراق و مدیریت سوئیچینگ گاز به مازوت",
+      "trainingStatus": "منطبق",
+      "monitoringMethod": "پایش شیفتی مصارف گاز و مازوت به ازای تن کلینکر و لاگ‌شیت‌های CCR"
+    },
+    {
+      "id": "kp-2",
+      "role": "اپراتورهای ارشد آسیاب سیمان (CCR Cement Mill Operators)",
+      "department": "دپارتمان آسیای سیمان",
+      "affectedSeu": "الکتروموتورهای دوقلوی آسیاب سیمان (531.BM.010 - توان ۲۸۰۰ کیلووات)",
+      "energyImpact": "کنترل مصرف ویژه برق آسیاب (هدف: ۳۸.۰۵ kWh/ton)، تنظیم نرخ باردهی متناسب با بلین و شیفت‌بندی در ساعات کم‌باری شبانه",
+      "requiredCompetence": "تسلط بر دیاگرام فرآیندی آسیاب مداربسته، تنظیم سپراتور و دیسپاچینگ ساعات پیک",
+      "trainingStatus": "منطبق",
+      "monitoringMethod": "پایش آنلاین توان دیماند و نرخ خروجی تن در ساعت آسیاب"
+    },
+    {
+      "id": "kp-3",
+      "role": "اپراتورهای ارشد آسیاب مواد خام (CCR Raw Mill Operators)",
+      "department": "دپارتمان خردایش مواد خام",
+      "affectedSeu": "آسیاب غلطکی عمودی (321.RM.020 - توان ۱۵۰۰ کیلووات) و فن‌های ID و Mill Fan",
+      "energyImpact": "کنترل مصرف ویژه برق (هدف: ۲۴.۵ kWh/ton)، تنظیم فشار جک‌های هیدرولیک غلطک‌ها و همگام‌سازی با گازهای خروجی کوره",
+      "requiredCompetence": "شناخت رفتار مکانیکی آسیاب غلطکی عمودی و تنظیم دمپر فن‌های مکنده گاز داغ",
+      "trainingStatus": "نیازمند بازآموزی",
+      "monitoringMethod": "ثبت روزانه SEC آسیاب مواد و پایش ارتعاشات غلطک‌ها"
+    },
+    {
+      "id": "kp-4",
+      "role": "تکنسین‌های نگهداری و تعمیرات مکانیک و هیدرولیک",
+      "department": "واحد نگهداری و تعمیرات (نت)",
+      "affectedSeu": "سیستم خنک‌کن کلینکر (گریت کولر)، الواتورها و نوارها",
+      "energyImpact": "جلوگیری از اتلاف انرژی و افت بازدهی هوادهی کولر، رگلاژ بیرینگ‌ها و پایش نشت هوای فشرده",
+      "requiredCompetence": "تعمیرات پیشگیرانه (PM)، روان‌کاری استاندارد و عیب‌یابی لرزش‌سنجی",
+      "trainingStatus": "منطبق",
+      "monitoringMethod": "تحلیل شاخص MTBF و MTTR توقفات مکانیکی منجر به اتلاف بار"
+    },
+    {
+      "id": "kp-5",
+      "role": "مهندسان و تکنسین‌های برق و اتوماسیون",
+      "department": "واحد برق و اتوماسیون",
+      "affectedSeu": "پست‌های قدرت ۶۳ به ۶.۳ کیلوولت، درایوهای فرکانس متغیر (VFD) و بانک‌های خازنی",
+      "energyImpact": "حفظ ضریب توان بالای ۰.۹۳، کاهش تلفات راکتیو ترانس‌ها و سلامت درایوهای کنترل دور فن‌ها",
+      "requiredCompetence": "آشنایی با درایوهای MV/LV و رله‌های حفاظتی و بانک خازنی",
+      "trainingStatus": "منطبق",
+      "monitoringMethod": "پایش ماهانه ضریب توان قبوض برق و چک‌لیست حرارت‌نگاری (ترموویژن) تابلوها"
+    },
+    {
+      "id": "kp-6",
+      "role": "کارشناس بازرگانی و خرید نسوز و تجهیزات انرژی‌بر",
+      "department": "واحد بازرگانی و تدارکات",
+      "affectedSeu": "آجر و جرم نسوز کوره، کابل‌ها، الکتروموتورهای راندمان بالا (IE3)",
+      "energyImpact": "تأثیر بر عایق‌بندی حرارتی بدنه کوره و ضریب هدایت حرارتی، جلوگیری از تلفات تشعشعی",
+      "requiredCompetence": "آشنایی با استاندارد خرید تجهیزات و مصالح انرژی‌بر بر اساس بند ۸.۲ استاندارد ISO 50001",
+      "trainingStatus": "در حال آموزش",
+      "monitoringMethod": "ممیزی سالانه انطباق مشخصات فنی خریدهای صورت‌گرفته با چک‌لیست انرژی"
+    }
+  ],
+  "relevantVariables": [
+    {
+      "id": "VAR-01",
+      "variableName": "نرخ تغذیه خوراک کوره (Kiln Feed Rate)",
+      "department": "دپارتمان خط پخت و کوره",
+      "targetSeu": "کوره دوار (431.KL.100) و پری‌کلساینر",
+      "variableType": "متغیر فرآیندی",
+      "unit": "t/h",
+      "typicalRange": "۱۲۰ تا ۱۴۵ تن در ساعت",
+      "impactOnEnPI": "اثرگذاری مستقیم بر مصرف ویژه حرارتی کوره (SEC Thermal)؛ تثبیت نرخ باردهی مانع از نوسان دما و تلفات مشعل می‌گردد.",
+      "correlationLevel": "بسیار قوی",
+      "monitoringMethod": "پایش پیوسته باسکول فیدوکولور CCR و فلومتر گاز سوختی"
+    },
+    {
+      "id": "VAR-02",
+      "variableName": "رطوبت سنگ آهک و آلوویوم ورودی آسیاب مواد",
+      "department": "دپارتمان خردایش مواد خام",
+      "targetSeu": "آسیاب غلطکی عمودی VRM (321.RM.020)",
+      "variableType": "متغیر کیفی و مواد",
+      "unit": "%",
+      "typicalRange": "۳.۵ تا ۸.۰ درصد وزنی",
+      "impactOnEnPI": "افزایش رطوبت نیازمند دریافت گاز داغ بیشتر از اگزاست کوره و بالارفتن بار مکش فن ID Fan آسیاب می‌شود.",
+      "correlationLevel": "قوی",
+      "monitoringMethod": "نمونه‌برداری شیفتی آزمایشگاه QC و دستگاه رطوبت‌سنج سریع"
+    },
+    {
+      "id": "VAR-03",
+      "variableName": "سطح ویژه پودر سیمان (Blaine Fineness)",
+      "department": "دپارتمان آسیای سیمان",
+      "targetSeu": "آسیاب‌های گلوله‌ای سیمان (531.BM.010)",
+      "variableType": "متغیر کیفی و مواد",
+      "unit": "cm²/g",
+      "typicalRange": "۳۱۰۰ تا ۳۸۰۰ سانتی‌متر مربع بر گرم",
+      "impactOnEnPI": "هر ۱۰۰ واحد افزایش سطح بلین، مصرف ویژه برق آسیاب را حدود ۱.۸ تا ۲.۳ کیلووات‌ساعت بر تن سیمان افزایش می‌دهد.",
+      "correlationLevel": "بسیار قوی",
+      "monitoringMethod": "تست آزمایشگاهی بلین‌متر خودکار و تنظیم دور سپراتور O-Sepa"
+    },
+    {
+      "id": "VAR-04",
+      "variableName": "دمای هوای محیط اقلیمی منطقه کیاسر",
+      "department": "کل سایت کارخانه",
+      "targetSeu": "کوره، کمپرسورهای هوا و چیلرهای الکتریکی",
+      "variableType": "متغیر محیطی",
+      "unit": "°C",
+      "typicalRange": "۵- تا ۳۸+ درجه سانتی‌گراد",
+      "impactOnEnPI": "تغییرات دمای محیط، چگالی هوای ورودی به کمپرسورها، راندمان خنک‌کن کلینکر و تلفات تشعشعی پوسته کوره را تغییر می‌دهد.",
+      "correlationLevel": "متوسط",
+      "monitoringMethod": "ایستگاه هواشناسی اختصاصی مستقر در سایت کارخانه"
+    },
+    {
+      "id": "VAR-05",
+      "variableName": "فشار مکش گاز داغ خروجی پیش‌گرمکن (Preheater Draft)",
+      "department": "دپارتمان خط پخت و کوره",
+      "targetSeu": "فن مکنده کوره (ID Fan - 331.FN.010)",
+      "variableType": "متغیر فرآیندی",
+      "unit": "mbar",
+      "typicalRange": "۴۵- تا ۵۵- میلی‌بار",
+      "impactOnEnPI": "افت فشار نامتعادل ناشی از گرفتگی سیکلون‌ها، آمپراژ الکتروموتور ۱۶۰۰ کیلووات فن ID را به شدت افزایش می‌دهد.",
+      "correlationLevel": "بسیار قوی",
+      "monitoringMethod": "ترانسمیترهای فشار تفاضلی و سیستم مانیتورینگ DCS"
+    },
+    {
+      "id": "VAR-06",
+      "variableName": "شاخص قابلیت سایش کلینکر (Bond Work Index)",
+      "department": "دپارتمان آسیای سیمان",
+      "targetSeu": "آسیاب گلوله‌ای سیمان و رولر پرس",
+      "variableType": "متغیر کیفی و مواد",
+      "unit": "kWh/t",
+      "typicalRange": "۱۲.۵ تا ۱۵.۸ کیلووات‌ساعت بر تن",
+      "impactOnEnPI": "فازهای کریستالی کلینکر (نسبت C3S به C2S و بلورهای آلیت) توان لازم برای خردایش را تعیین کرده و مستقیماً بر SEC برق موثر است.",
+      "correlationLevel": "قوی",
+      "monitoringMethod": "آنالیز روزانه پراش پرتو ایکس (XRD) کلینکر خروجی کوره"
+    },
+    {
+      "id": "VAR-07",
+      "variableName": "ظرفیت اسمی ۲۰۰۰ تن کلینکر در روز و ابعاد کوره (۴ × ۶۰ متر)",
+      "department": "دپارتمان خط پخت و کوره",
+      "targetSeu": "کوره دوار (431.KL.100)",
+      "variableType": "عامل استاتیک",
+      "unit": "t/d و m",
+      "typicalRange": "طراحی ثابت کارخانه‌ای",
+      "impactOnEnPI": "حجم پوسته کوره، سطح انتقال حرارت و خط مبنای مصرف انرژی بر مبنای این عامل ثابت ساختاری محاسبه می‌شود.",
+      "correlationLevel": "بسیار قوی",
+      "monitoringMethod": "شناسنامه فنی تجهیزات و اسناد طراحی خط تولید"
+    },
+    {
+      "id": "VAR-08",
+      "variableName": "نرخ نشتی در خطوط لوله‌کشی هوای فشرده کارخانه",
+      "department": "یوتیلیتی و بارگیرخانه",
+      "targetSeu": "کمپرسورخانه (611.BL.130)",
+      "variableType": "متغیر فرآیندی",
+      "unit": "%",
+      "typicalRange": "۱۵ تا ۲۸ درصد اتلاف",
+      "impactOnEnPI": "هر ۵ درصد کاهش در نشت شبکه هوای فشرده، موجب بیش از ۷۵ مگاوات‌ساعت صرفه‌جویی سالانه برق کمپرسورها می‌گردد.",
+      "correlationLevel": "قوی",
+      "monitoringMethod": "کنتور فلومتر التراسونیک آنلاین و بازرسی نشت‌یابی صوتی"
+    }
+  ],
+  "energyBreakdown": {
+    "summary": {
+      "totalThermalEnergyGj": 1820000,
+      "totalElectricalEnergyMwh": 65000,
+      "totalFuelGasNm3": 48500000,
+      "totalFuelOilLiter": 4200000,
+      "totalCompressedAirNm3": 18500000
+    },
+    "departmentsShare": [
+      {
+        "department": "سنگ‌شکن و اختلاط مواد",
+        "electricityMwh": 1495,
+        "electricityPct": 2.3,
+        "naturalGasNm3": 0,
+        "fuelOilLiter": 0,
+        "compressedAirPct": 4.5,
+        "totalGj": 5382
+      },
+      {
+        "department": "آسیاب مواد خام",
+        "electricityMwh": 15509,
+        "electricityPct": 23.86,
+        "naturalGasNm3": 1200000,
+        "fuelOilLiter": 0,
+        "compressedAirPct": 18.2,
+        "totalGj": 101800
+      },
+      {
+        "department": "کوره پخت و خنک‌کن",
+        "electricityMwh": 14306,
+        "electricityPct": 22.01,
+        "naturalGasNm3": 47300000,
+        "fuelOilLiter": 4200000,
+        "compressedAirPct": 32.5,
+        "totalGj": 1885000
+      },
+      {
+        "department": "آسیاب‌های سیمان",
+        "electricityMwh": 24076,
+        "electricityPct": 37.04,
+        "naturalGasNm3": 0,
+        "fuelOilLiter": 0,
+        "compressedAirPct": 26.8,
+        "totalGj": 86673
+      },
+      {
+        "department": "بارگیرخانه و یوتیلیتی",
+        "electricityMwh": 9126,
+        "electricityPct": 14.04,
+        "naturalGasNm3": 0,
+        "fuelOilLiter": 0,
+        "compressedAirPct": 18.0,
+        "totalGj": 32853
+      }
+    ]
+  },
+  "equipmentEfficiency": [
+    {
+      "tag": "431.KL.100",
+      "name": "کوره دوار خط پخت (Rotary Kiln)",
+      "department": "خط پخت",
+      "ratedCapacity": "2000 t/d clinker",
+      "operatingEfficiencyPct": 64.2,
+      "benchmarkEfficiencyPct": 68.0,
+      "lossFactors": "تلفات حرارتی از پوسته کوره (Shell Loss)، حرارت گازهای خروجی اگزاست و دمای هوای خروجی گریت کولر",
+      "actionPlan": "تعویض آجرهای نسوز با عایق سبک راندمان بالا و بهبود آب‌بندی درزگیر ورودی و خروجی کوره",
+      "status": "نیازمند بهبود"
+    },
+    {
+      "tag": "441.CC.100",
+      "name": "خنک‌کن کلینکر (Grate Cooler)",
+      "department": "خط پخت",
+      "ratedCapacity": "2200 t/d clinker",
+      "operatingEfficiencyPct": 69.5,
+      "benchmarkEfficiencyPct": 75.0,
+      "lossFactors": "افت راندمان رکوپراسیون هوای ثانویه و ثالثیه، سایش صفحات گریت پلیت و فرار هوای سرد",
+      "actionPlan": "تنظیم شیب بستر کلینکر و کالیبراسیون دور فن‌های ۶ گانه هوادهی",
+      "status": "متوسط"
+    },
+    {
+      "tag": "531.BM.010",
+      "name": "آسیاب گلوله‌ای سیمان (Ball Mill - 2x1400 kW)",
+      "department": "آسیاب سیمان",
+      "ratedCapacity": "85 t/h",
+      "operatingEfficiencyPct": 72.8,
+      "benchmarkEfficiencyPct": 78.0,
+      "lossFactors": "سایش دیافراگم بین اتاقه‌ها، نامتعادل بودن شارژ گلوله‌ها و مقاومت به سایش کلینکر",
+      "actionPlan": "بهینه‌سازی توزیع دانه‌بندی گلوله‌ها و تنظیم نرخ هوادهی از طریق دمپر بک‌فیلتر",
+      "status": "نیازمند بهبود"
+    },
+    {
+      "tag": "321.RM.020",
+      "name": "آسیاب غلطکی عمودی مواد خام (VRM - 1500 kW)",
+      "department": "آسیاب مواد",
+      "ratedCapacity": "180 t/h",
+      "operatingEfficiencyPct": 84.5,
+      "benchmarkEfficiencyPct": 86.0,
+      "lossFactors": "سایش لاینرهای غلطک و سینی سایش، هوای کاذب ورودی به بدنه آسیاب",
+      "actionPlan": "جوشکاری سخت‌کاری سطحی (Hardfacing) لاینرهای غلطک و درزبندی بدنه",
+      "status": "مطلوب"
+    },
+    {
+      "tag": "331.FN.010",
+      "name": "فن مکنده اصلی کوره و آسیاب (ID Fan - 1600 kW)",
+      "department": "آسیاب مواد و پخت",
+      "ratedCapacity": "415,000 m³/h",
+      "operatingEfficiencyPct": 81.0,
+      "benchmarkEfficiencyPct": 85.0,
+      "lossFactors": "افت فشار دمپرها و نشت گاز داغ قبل از فن",
+      "actionPlan": "نصب درایو کنترل دور (VFD) به جای کنترل توسط دمپر مکانیکی ورودی",
+      "status": "در حال اقدام"
+    },
+    {
+      "tag": "611.BL.130",
+      "name": "کمپرسورخانه و شبکه توزیع هوای فشرده (Compressed Air)",
+      "department": "یوتیلیتی و بارگیرخانه",
+      "ratedCapacity": "7.5 bar",
+      "operatingEfficiencyPct": 61.0,
+      "benchmarkEfficiencyPct": 75.0,
+      "lossFactors": "نشتی لوله‌کشی و شیرهای پنوماتیک، افت فشار درایرها و افت بازده کمپرسورها در اثر دما",
+      "actionPlan": "پویش آکوستیک نشت‌یابی التراسونیک در کل شبکه سایت و اصلاح اتصالات فرسوده",
+      "status": "بحرانی"
+    }
+  ],
+  "productionEnergyForecast": {
+    "annualSummary": {
+      "plannedClinkerTon": 680000,
+      "plannedCementTon": 720000,
+      "budgetedElectricityMwh": 73440,
+      "budgetedGasNm3": 54400000,
+      "budgetedFuelOilLiter": 3800000
+    },
+    "monthlySchedule": [
+      { "month": "فروردین", "clinkerTon": 58000, "cementTon": 60000, "secElectricTarget": 102.5, "secThermalTarget": 880, "electricityMwh": 6150, "gasNm3": 4640000, "fuelOilLiter": 0, "operationConstraint": "عادی" },
+      { "month": "اردیبهشت", "clinkerTon": 62000, "cementTon": 65000, "secElectricTarget": 101.8, "secThermalTarget": 875, "electricityMwh": 6617, "gasNm3": 4960000, "fuelOilLiter": 0, "operationConstraint": "عادی" },
+      { "month": "خرداد", "clinkerTon": 60000, "cementTon": 64000, "secElectricTarget": 103.0, "secThermalTarget": 882, "electricityMwh": 6592, "gasNm3": 4800000, "fuelOilLiter": 0, "operationConstraint": "شروع پیک‌سایی بار تابستان" },
+      { "month": "تیر", "clinkerTon": 52000, "cementTon": 55000, "secElectricTarget": 106.5, "secThermalTarget": 895, "electricityMwh": 5857, "gasNm3": 4160000, "fuelOilLiter": 0, "operationConstraint": "محدودیت سهمیه دیماند توانیر (شیفت شب)" },
+      { "month": "مرداد", "clinkerTon": 50000, "cementTon": 52000, "secElectricTarget": 108.0, "secThermalTarget": 905, "electricityMwh": 5616, "gasNm3": 4000000, "fuelOilLiter": 0, "operationConstraint": "اوج خاموشی و مدیریت بار تابستانی" },
+      { "month": "شهریور", "clinkerTon": 56000, "cementTon": 60000, "secElectricTarget": 104.0, "secThermalTarget": 885, "electricityMwh": 6240, "gasNm3": 4480000, "fuelOilLiter": 0, "operationConstraint": "کاهش محدودیت‌های برقی" },
+      { "month": "مهر", "clinkerTon": 62000, "cementTon": 66000, "secElectricTarget": 101.5, "secThermalTarget": 876, "electricityMwh": 6699, "gasNm3": 4960000, "fuelOilLiter": 0, "operationConstraint": "تولید حداکثری و ذخیره‌سازی کلینکر" },
+      { "month": "آبان", "clinkerTon": 60000, "cementTon": 64000, "secElectricTarget": 102.0, "secThermalTarget": 880, "electricityMwh": 6528, "gasNm3": 4800000, "fuelOilLiter": 0, "operationConstraint": "عادی" },
+      { "month": "آذر", "clinkerTon": 58000, "cementTon": 62000, "secElectricTarget": 103.5, "secThermalTarget": 890, "electricityMwh": 6417, "gasNm3": 3800000, "fuelOilLiter": 850000, "operationConstraint": "شروع افت فشار گاز و سوئیچ به مازوت" },
+      { "month": "دی", "clinkerTon": 50000, "cementTon": 54000, "secElectricTarget": 105.0, "secThermalTarget": 910, "electricityMwh": 5670, "gasNm3": 2000000, "fuelOilLiter": 1500000, "operationConstraint": "اوج بحران ناترازی گاز و مصرف مازوت" },
+      { "month": "بهمن", "clinkerTon": 52000, "cementTon": 56000, "secElectricTarget": 104.5, "secThermalTarget": 900, "electricityMwh": 5852, "gasNm3": 2800000, "fuelOilLiter": 1450000, "operationConstraint": "سهمیه‌بندی گاز و سوخت جایگزین" },
+      { "month": "اسفند", "clinkerTon": 60000, "cementTon": 62000, "secElectricTarget": 101.5, "secThermalTarget": 878, "electricityMwh": 6293, "gasNm3": 4800000, "fuelOilLiter": 0, "operationConstraint": "بازگشت فشار گاز پایدار و رونق بازار" }
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+{
+  "systemTitle": "ماتریس مرزها و دامنه‌های سازمانی و فرآیندی (Boundary Matrix)",
+  "standardClause": "بند ۴.۳ و ۴.۴ استاندارد ISO 50001:2018",
+  "boundaries": [
+    {
+      "row": 1,
+      "department": "کوره و خنک‌کن",
+      "scopeDescription": "فرآیند حرارتی اصلی پخت کلینکر، پیش‌گرمکن، کلساینر و گریت کولر",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "گاز طبیعی، مازوت، برق، هوای فشرده",
+      "equipment": "مشعل اصلی، کلساینر، فن ID، فن EP، درایو کوره، کولر کلینکر",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (SEU اصلی حرارتی و الکتریکی)"
+    },
+    {
+      "row": 2,
+      "department": "آسیاب مواد خام",
+      "scopeDescription": "آماده‌سازی، خردایش و خشک‌کردن مواد خام با گاز داغ پیش‌گرمکن",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق، هوای فشرده",
+      "equipment": "آسیاب گلوله‌ای مواد، سپراتور دینامیک O-Sepa، فن سیرکولاسیون مواد",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (SEU الکتریکی)"
+    },
+    {
+      "row": 3,
+      "department": "آسیاب سیمان",
+      "scopeDescription": "خردایش نهایی کلینکر و پوزولان و تولید انواع سیمان",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق، هوای فشرده",
+      "equipment": "آسیاب سیمان ۱ و ۲، سپراتورهای راندمان بالا، الواتورها، فن‌های بگ‌فیلتر",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (SEU الکتریکی)"
+    },
+    {
+      "row": 4,
+      "department": "سنگ‌شکن و اختلاط مواد",
+      "scopeDescription": "خردایش اولیه سنگ‌آهک، انتقال به سالن دپو و همگن‌سازی مواد",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق",
+      "equipment": "سنگ‌شکن فکی، همرمیل، نوارنقاله‌ها، استاکر و ریکلایمر",
+      "outsourced": "خیر",
+      "seuStatus": "غیربارز"
+    },
+    {
+      "row": 5,
+      "department": "بارگیرخانه و سیلوهای سیمان",
+      "scopeDescription": "ذخیره‌سازی در سیلوها، کیسه‌گیری اتوماتیک و بارگیری فله و پاکتی",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق، هوای فشرده",
+      "equipment": "ماشین‌های روتوپکر، لودرهای پاکتی، جت‌فیلترها، فن‌های هوادهی سیلو",
+      "outsourced": "خیر",
+      "seuStatus": "غیربارز"
+    },
+    {
+      "row": 6,
+      "department": "سیستم هوای فشرده و یوتیلیتی",
+      "scopeDescription": "ایستگاه مرکزی کمپرسورها و شبکه توزیع هوای فشرده ابزاردقیق و عمومی",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق",
+      "equipment": "کمپرسورهای اسکرو اینورتری، درایرهای تبریدی، مخازن هوای فشرده",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (SEU کمکی)"
+    },
+    {
+      "row": 7,
+      "department": "پست و توزیع برق",
+      "scopeDescription": "پست ۶۳/۶ کیلوولت اصلی، ترانسفورماتورها و فیدرهای توزیع برق سایت",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "برق",
+      "equipment": "ترانسفورماتورهای قدرت، تابلوهای MV/LV، بانک‌های خازنی اصلاح ضریب توان",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (زیرساخت توزیع)"
+    },
+    {
+      "row": 8,
+      "department": "تاسیسات سوخت‌رسانی و ایستگاه CGS",
+      "scopeDescription": "ایستگاه تقلیل فشار گاز طبیعی، مخازن ذخیره مازوت و سامانه‌های پیش‌گرمایش سوخت",
+      "insideEnMS": "بلی",
+      "insidePhysical": "بلی",
+      "status": "مشمول",
+      "energyCarriers": "گاز طبیعی، مازوت، برق",
+      "equipment": "رگولاتورهای CGS، مبدل‌های حرارتی، پمپ‌خانه مازوت، فیلترهای گاز",
+      "outsourced": "خیر",
+      "seuStatus": "بارز (زیرساخت حرارتی)"
+    }
+  ]
+}

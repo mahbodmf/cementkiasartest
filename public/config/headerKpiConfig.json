@@ -1,0 +1,37 @@
+[
+  {
+    "id": "thermal_energy",
+    "title": "کل مصرف انرژی حرارتی",
+    "value": "1,820,000",
+    "unit": "GJ",
+    "subtitle": "معادل گاز طبیعی و مازوت"
+  },
+  {
+    "id": "electrical_energy",
+    "title": "کل مصرف برق سالانه",
+    "value": "65,000",
+    "unit": "MWh",
+    "subtitle": "پست 63/6.3 کیلوولت کارخانه"
+  },
+  {
+    "id": "gas_quota",
+    "title": "سهم گاز طبیعی پکت",
+    "value": "48.5",
+    "unit": "میلیون Nm³",
+    "subtitle": "ایستگاه تقلیل فشار CGS"
+  },
+  {
+    "id": "compressed_air",
+    "title": "هوای فشرده تولیدی",
+    "value": "18.5",
+    "unit": "میلیون Nm³",
+    "subtitle": "فشار کاری 7.5 بار"
+  },
+  {
+    "id": "clinker_target",
+    "title": "هدف تولید کلینکر",
+    "value": "680,000",
+    "unit": "تن",
+    "subtitle": "سیمان: 720,000 تن"
+  }
+]

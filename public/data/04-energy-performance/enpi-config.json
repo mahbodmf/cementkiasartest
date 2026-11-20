@@ -1,0 +1,122 @@
+{
+  "version": "1.0.0",
+  "standardReference": "ISO 50001:2018 - Clause 6.4 (EnPIs) & Clause 6.5 (EnB)",
+  "plantName": "شرکت صنایع سیمان کیاسر (مانیستان)",
+  "dataSources": {
+    "productionReportPath": "/data/02-5-operations/daily-production-report.json",
+    "energyConsumptionPath": "/data/03-energy-review/energy-consumption-log.json"
+  },
+  "calorificFactors": {
+    "naturalGasKcalPerNm3": 8588.9,
+    "fuelOilKcalPerLiter": 8600.0
+  },
+  "toleranceWarningPct": 5.0,
+  "stage1DepartmentTargets": [
+    {
+      "id": "crusher",
+      "name": "سنگ‌شکن",
+      "carrier": "برق",
+      "carrierType": "electric",
+      "productionBasisLabel": "مواد خردشده",
+      "productionField": "crusher",
+      "energyFields": ["substation1_Crusher", "crusherMotor"],
+      "targetSec": 1.14,
+      "unit": "kWh/t",
+      "energyUnit": "kWh"
+    },
+    {
+      "id": "rawMill",
+      "name": "آسیاب مواد خام",
+      "carrier": "برق",
+      "carrierType": "electric",
+      "productionBasisLabel": "مواد تولیدی ثبت‌شده",
+      "productionField": "rawMeal",
+      "energyFields": ["substation2_RawMill", "rawMillMainMotor", "rawMillFanMotor"],
+      "targetSec": 24.0,
+      "unit": "kWh/t",
+      "energyUnit": "kWh"
+    },
+    {
+      "id": "kilnElectric",
+      "name": "پخت - برق کل واحد",
+      "carrier": "برق",
+      "carrierType": "electric",
+      "productionBasisLabel": "کلینکر",
+      "productionField": "clinker",
+      "energyFields": [
+        "substation3_Kiln",
+        "kilnMainDrive",
+        "kilnIdFan",
+        "baghouseMotor",
+        "substation4_EP",
+        "epFanMotor"
+      ],
+      "targetSec": 34.0,
+      "unit": "kWh/t",
+      "energyUnit": "kWh"
+    },
+    {
+      "id": "cementMill",
+      "name": "آسیاب سیمان",
+      "carrier": "برق",
+      "carrierType": "electric",
+      "productionBasisLabel": "سیمان",
+      "productionField": "cement",
+      "energyFields": [
+        "substation5_CementMill",
+        "cementMill1Motor",
+        "cementMill2Motor",
+        "cementMillFan"
+      ],
+      "targetSec": 38.0,
+      "unit": "kWh/t",
+      "energyUnit": "kWh"
+    },
+    {
+      "id": "kilnThermal",
+      "name": "پخت - انرژی حرارتی",
+      "carrier": "حرارت (گاز و مازوت)",
+      "carrierType": "thermal",
+      "productionBasisLabel": "کلینکر",
+      "productionField": "clinker",
+      "energyFields": ["naturalGasNm3", "fuelOilLiter"],
+      "targetSec": 900.0,
+      "unit": "kcal/kg",
+      "energyUnit": "Mcal"
+    }
+  ],
+  "regressionModels": {
+    "variables": {
+      "ccd": {
+        "symbol": "CCD",
+        "title": "اختلاف تولید کلینکر و سیمان",
+        "formula": "Clinker - Cement",
+        "unit": "تن"
+      },
+      "cement": {
+        "symbol": "C.",
+        "title": "تناژ تولیدی سیمان تیپ ۲ (۳۲.۵)",
+        "formula": "Cement Type 2 (32.5)",
+        "unit": "تن"
+      }
+    },
+    "electrical": {
+      "id": "org_electrical",
+      "title": "شاخص رگرسیونی برق کل سازمان",
+      "formulaText": "Y_elec = (-57.08 × CCD) + (108.31 × C.)",
+      "coeffCCD": -57.08,
+      "coeffCement": 108.31,
+      "totalUnit": "kWh",
+      "specificUnit": "kWh/t"
+    },
+    "thermal": {
+      "id": "org_thermal",
+      "title": "شاخص رگرسیونی حرارتی کل سازمان",
+      "formulaText": "Y_thermal = (-98.89 × CCD) + (114.38 × C.)",
+      "coeffCCD": -98.89,
+      "coeffCement": 114.38,
+      "totalUnit": "Nm³ معادل گاز",
+      "specificUnit": "Nm³/t"
+    }
+  }
+}

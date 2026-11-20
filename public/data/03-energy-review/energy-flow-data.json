@@ -1,0 +1,136 @@
+{
+  "plant": "کارخانه سیمان کیاسر",
+  "fiscalYear": "۱۴۰۴-۱۴۰۵ (۱ دی لغایت ۳۰ آذر)",
+  "productionLines": [
+    { "id": "all", "title": "کل کارخانه (تجمیع خطوط)" },
+    { "id": "line1", "title": "خط ۱ تولید کلینکر و سیمان (۲۰۰۰ tpd)" }
+  ],
+  "plantTotalFlow": {
+    "electricityMwh": 65000,
+    "naturalGasNm3": 48500000,
+    "fuelOilLiter": 4200000,
+    "compressedAirNm3": 18500000,
+    "totalEquivalentGj": 1885000,
+    "clinkerProductionTon": 680000,
+    "cementProductionTon": 720000,
+    "secElectricActual": 103.5,
+    "secElectricTarget": 104.0,
+    "secThermalActual": 885.0,
+    "secThermalTarget": 888.0
+  },
+  "departmentFlows": [
+    {
+      "id": "crusher",
+      "lineId": "line1",
+      "name": "سنگ شکن",
+      "code": "Dept 100",
+      "energyShareGj": 5382,
+      "energySharePct": 0.3,
+      "electricityMwh": 1495,
+      "electricSharePct": 2.3,
+      "naturalGasNm3": 0,
+      "fuelOilLiter": 0,
+      "compressedAirPct": 2.0,
+      "secElectricActual": 2.2,
+      "secElectricTarget": 2.2,
+      "primaryCarrier": "برق فشار ضعیف و متوسط",
+      "mainFeeders": ["پست برق سنگ‌‌شکن ترانس TR-01 (6.3/0.4 kV)"],
+      "keyEquipments": [
+        { "tag": "111.HC.030", "name": "سنگ‌شکن چکشی (Hammer Crusher)", "powerKw": 800, "shareOfDeptPct": 78 },
+        { "tag": "121.BC.010", "name": "نوار نقاله انتقال سنگ‌آهک", "powerKw": 55, "shareOfDeptPct": 5.4 },
+        { "tag": "131.RE.030", "name": "ریکلایمر پل‌مانند دپو", "powerKw": 37, "shareOfDeptPct": 3.6 }
+      ]
+    },
+    {
+      "id": "rawmill",
+      "lineId": "line1",
+      "name": "آسیای مواد خام",
+      "code": "Dept 300",
+      "energyShareGj": 101800,
+      "energySharePct": 5.4,
+      "electricityMwh": 15509,
+      "electricSharePct": 23.86,
+      "naturalGasNm3": 1200000,
+      "fuelOilLiter": 0,
+      "compressedAirPct": 15.0,
+      "secElectricActual": 24.5,
+      "secElectricTarget": 24.5,
+      "primaryCarrier": "برق ۶.۳ کیلوولت + گاز ژنراتور گاز داغ",
+      "mainFeeders": ["پست برق آسیاب مواد ترانسفورماتور قدرت ۶.۳ کیلوولت"],
+      "keyEquipments": [
+        { "tag": "331.FN.010", "name": "فن مکنده کوره و آسیاب (ID Fan)", "powerKw": 1600, "shareOfDeptPct": 29.4 },
+        { "tag": "321.RM.020", "name": "آسیاب غلطکی عمودی (VRM)", "powerKw": 1500, "shareOfDeptPct": 27.6 },
+        { "tag": "321.FN.050", "name": "فن در گردش آسیاب مواد (Mill Fan)", "powerKw": 1300, "shareOfDeptPct": 23.9 },
+        { "tag": "331.FN.030", "name": "فن بگ‌هاوس اگزاست دودکش", "powerKw": 850, "shareOfDeptPct": 15.6 }
+      ]
+    },
+    {
+      "id": "kiln",
+      "lineId": "line1",
+      "name": "پخت",
+      "code": "Dept 400",
+      "energyShareGj": 1660000,
+      "energySharePct": 88.1,
+      "electricityMwh": 14306,
+      "electricSharePct": 22.01,
+      "naturalGasNm3": 47300000,
+      "fuelOilLiter": 4200000,
+      "compressedAirPct": 25.0,
+      "secThermalActual": 885.0,
+      "secThermalTarget": 888.0,
+      "primaryCarrier": "سوخت حرارتی اصلی (گاز/مازوت) + برق ۶.۳ و ۰.۴ کیلوولت",
+      "mainFeeders": ["ایستگاه تقلیل فشار گاز CGS", "خط سوخت مازوت رزرو", "پست برق کوره و کولر"],
+      "keyEquipments": [
+        { "tag": "441.FN.201-206", "name": "مجموعه فن‌های خنک‌کن کلینکر (۶ دستگاه)", "powerKw": 590, "shareOfDeptPct": 32.4 },
+        { "tag": "441.FN.590", "name": "فن الکتروفیلتر کولر (EP Fan)", "powerKw": 400, "shareOfDeptPct": 22.0 },
+        { "tag": "431.MD.140", "name": "درایو اصلی چرخش کوره دوار", "powerKw": 350, "shareOfDeptPct": 19.2 },
+        { "tag": "351.BE.130", "name": "الواتور باکت ۱۰۰ متری تغذیه کوره", "powerKw": 110, "shareOfDeptPct": 6.0 }
+      ]
+    },
+    {
+      "id": "cementmill",
+      "lineId": "line1",
+      "name": "آسیای سیمان",
+      "code": "Dept 500",
+      "energyShareGj": 86673,
+      "energySharePct": 4.6,
+      "electricityMwh": 24076,
+      "electricSharePct": 37.04,
+      "naturalGasNm3": 0,
+      "fuelOilLiter": 0,
+      "compressedAirPct": 40.0,
+      "secElectricActual": 38.05,
+      "secElectricTarget": 38.05,
+      "primaryCarrier": "برق فشار متوسط ۶.۳ کیلوولت (بزرگترین مصرف‌کننده برق)",
+      "mainFeeders": ["پست برق مستقل آسیاب سیمان با ۲ فیدر اسلیپ‌رینگ ۶.۳ کیلوولت"],
+      "keyEquipments": [
+        { "tag": "531.BM.010", "name": "موتورهای دوقلوی آسیاب گلوله‌ای (۲ در ۱۴۰۰ کیلووات)", "powerKw": 2800, "shareOfDeptPct": 79.5 },
+        { "tag": "531.FN.100", "name": "فن سیرکولاسیون مداربسته سپراتور", "powerKw": 300, "shareOfDeptPct": 8.5 },
+        { "tag": "531.MC.090", "name": "سپراتور دینامیکی راندمان بالا (VTP 2400)", "powerKw": 160, "shareOfDeptPct": 4.5 },
+        { "tag": "531.FN.131", "name": "فن بگ‌هاوس خروجی آسیاب سیمان", "powerKw": 90, "shareOfDeptPct": 2.6 }
+      ]
+    },
+    {
+      "id": "packing",
+      "lineId": "line1",
+      "name": "بارگیرخانه",
+      "code": "Dept 600",
+      "energyShareGj": 32853,
+      "energySharePct": 1.7,
+      "electricityMwh": 9126,
+      "electricSharePct": 14.04,
+      "naturalGasNm3": 0,
+      "fuelOilLiter": 0,
+      "compressedAirPct": 18.0,
+      "secElectricActual": 16.0,
+      "secElectricTarget": 16.0,
+      "primaryCarrier": "برق فشار ضعیف ۴۰۰ ولت + شبکه هوای فشرده ۷.۵ بار",
+      "mainFeeders": ["پست برق بارگیرخانه", "مرکز توزیع هوای فشرده"],
+      "keyEquipments": [
+        { "tag": "611.BL.130", "name": "مجموعه بلوئرهای هوادهی و سیال‌سازی سیلوها", "powerKw": 71, "shareOfDeptPct": 18.7 },
+        { "tag": "641.PM.050", "name": "ماشین کیسه‌پرکنی روتوپکر ۸ شیره", "powerKw": 32.75, "shareOfDeptPct": 8.6 },
+        { "tag": "641.FN.161", "name": "فن غبارگیر روتوپکر", "powerKw": 30, "shareOfDeptPct": 7.9 }
+      ]
+    }
+  ]
+}

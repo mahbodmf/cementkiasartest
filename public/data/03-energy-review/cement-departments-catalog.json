@@ -1,0 +1,227 @@
+{
+  "catalogTitle": "کاتالوگ جامع، کتابخانه تجهیزات و شناسنامه فنی دپارتمان‌های صنعت سیمان",
+  "version": "2.0.0",
+  "updatedAt": "1405/01/01",
+  "standardCarriers": [
+    { "id": "electricity", "name": "برق شبکه ۶۳ و ۶.۳ کیلوولت", "unit": "MWh", "color": "#10b981", "gjFactor": 3.6 },
+    { "id": "natural_gas", "name": "گاز طبیعی (ایستگاه CGS)", "unit": "Nm³", "color": "#06b6d4", "gjFactor": 0.035 },
+    { "id": "fuel_oil", "name": "نفت کوره / مازوت صنعتی", "unit": "لیتر", "color": "#f43f5e", "gjFactor": 0.040 },
+    { "id": "diesel", "name": "گازوئیل / نفت‌گاز (معدن و دیزل‌ها)", "unit": "لیتر", "color": "#f59e0b", "gjFactor": 0.038 },
+    { "id": "rdf_tdf", "name": "سوخت‌های پسماندی جایگزین (RDF/TDF)", "unit": "تن", "color": "#8b5cf6", "gjFactor": 18.5 },
+    { "id": "petcoke_coal", "name": "پتروکک و زغال‌سنگ خردشده", "unit": "تن", "color": "#64748b", "gjFactor": 29.0 },
+    { "id": "compressed_air", "name": "هوای فشرده (کمپرسورخانه)", "unit": "Nm³", "color": "#38bdf8", "gjFactor": 0.001 }
+  ],
+  "catalogDepartments": [
+    {
+      "code": "Dept 050",
+      "defaultName": "معدن و استخراج سنگ‌آهک",
+      "category": "معدن و بارگیری مواد",
+      "nominalCapacity": "۸۰۰ تن در ساعت",
+      "operatingHoursPerYear": 2400,
+      "installedElectricalPowerKw": 350,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "گازوئیل دیزل و برق پمپاژ",
+      "defaultSecBenchmark": 0.8,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق اختصاصی معدن - ترانس موقت پمپاژ"],
+      "typicalEquipments": [
+        { "tag": "051.DR.010", "name": "دریل واگن حفاری هیدرولیکی", "type": "حفاری و آتشباری", "powerKw": 180, "voltage": "400 V", "capacity": "60 m/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "051.PU.020", "name": "مجموعه پمپ‌های زهکشی و آبکشی کف معدن", "type": "پمپاژ صنعتی", "powerKw": 90, "voltage": "400 V", "capacity": "120 m³/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 100",
+      "defaultName": "سنگ شکن",
+      "category": "خردایش و ترابری مواد اولیه",
+      "nominalCapacity": "۶۵۰ تن در ساعت",
+      "operatingHoursPerYear": 2800,
+      "installedElectricalPowerKw": 1450,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار متوسط و ضعیف (۶.۳ و ۰.۴ کیلوولت)",
+      "defaultSecBenchmark": 2.2,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق سنگ شکن - ترانسفورماتور TR-01 (6.3/0.4 kV - 1600 kVA)"],
+      "typicalEquipments": [
+        { "tag": "111.HC.030", "name": "سنگ‌شکن چکشی (Hammer Crusher)", "type": "خردایش اولیه", "powerKw": 800, "voltage": "6.3 kV", "capacity": "650 t/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "121.BC.010", "name": "نوار نقاله انتقال سنگ‌آهک به دپو", "type": "ترابری مواد", "powerKw": 55, "voltage": "400 V", "capacity": "650 t/h", "isSeu": false, "criticality": "عادی" },
+        { "tag": "131.RE.030", "name": "ریکلایمر پل‌مانند سالن اختلاط", "type": "برداشت و اختلاط مواد", "powerKw": 37, "voltage": "400 V", "capacity": "300 t/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 200",
+      "defaultName": "سالن اختلاط و پیش‌همگن‌سازی",
+      "category": "انباشت و برداشت خاک",
+      "nominalCapacity": "۵۰۰ تن در ساعت",
+      "operatingHoursPerYear": 3200,
+      "installedElectricalPowerKw": 480,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار ضعیف ۴۰۰ ولت",
+      "defaultSecBenchmark": 1.2,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق سالن اختلاط و ترانس محلی"],
+      "typicalEquipments": [
+        { "tag": "211.ST.010", "name": "استاکر انباشت نواری سنگ‌آهک (Stacker)", "type": "انباشت مواد", "powerKw": 110, "voltage": "400 V", "capacity": "650 t/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "221.AF.020", "name": "تغذیه‌کننده‌های وزنی آپرون فیدر", "type": "توزین و تغذیه", "powerKw": 45, "voltage": "400 V", "capacity": "250 t/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 300",
+      "defaultName": "آسیای مواد خام",
+      "category": "سایش مواد خام و انتقال به سیلو",
+      "nominalCapacity": "۱۸۰ تن در ساعت",
+      "operatingHoursPerYear": 4200,
+      "installedElectricalPowerKw": 4600,
+      "installedThermalGjH": 18.5,
+      "primaryCarrier": "برق فشار متوسط ۶.۳ کیلوولت + گاز طبیعی ژنراتور گاز داغ",
+      "defaultSecBenchmark": 24.5,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق آسیای مواد - فیدرهای ۶.۳ کیلوولت ترانس قدرت TR-03"],
+      "typicalEquipments": [
+        { "tag": "331.FN.010", "name": "فن مکنده کوره و آسیاب (ID Fan)", "type": "فن اصلی فرآیند", "powerKw": 1600, "voltage": "6.3 kV", "capacity": "450000 m³/h", "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "321.RM.020", "name": "آسیاب غلطکی عمودی مواد (VRM)", "type": "سایش غلطکی", "powerKw": 1500, "voltage": "6.3 kV", "capacity": "180 t/h", "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "321.FN.050", "name": "فن در گردش آسیاب مواد (Mill Fan)", "type": "فن گردش هوا", "powerKw": 1300, "voltage": "6.3 kV", "capacity": "380000 m³/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "331.FN.030", "name": "فن بگ‌هاوس اگزاست دودکش", "type": "فن غبارگیر", "powerKw": 850, "voltage": "6.3 kV", "capacity": "250000 m³/h", "isSeu": true, "criticality": "بحرانی" }
+      ]
+    },
+    {
+      "code": "Dept 350",
+      "defaultName": "سیلوهای ذخیره و بلوندینگ مواد خام",
+      "category": "همگن‌سازی و ذخیره خوراک کوره",
+      "nominalCapacity": "۲۰۰ تن در ساعت",
+      "operatingHoursPerYear": 7200,
+      "installedElectricalPowerKw": 620,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار ضعیف و هوای فشرده دمای بالا",
+      "defaultSecBenchmark": 1.5,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق برج خنک‌کن و سیلوهای مواد"],
+      "typicalEquipments": [
+        { "tag": "351.BL.010", "name": "بلوئرهای هوادهی روتس کف سیلوهای مواد", "type": "سیال‌سازی پنوماتیک", "powerKw": 90, "voltage": "400 V", "capacity": "55 m³/min", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "351.BE.110", "name": "الواتور تغذیه سیلوهای همگن‌ساز", "type": "انتقال عمودی", "powerKw": 75, "voltage": "400 V", "capacity": "200 t/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 400",
+      "defaultName": "پخت",
+      "category": "کلسیناسیون، پخت کلینکر و خنک‌سازی",
+      "nominalCapacity": "۲۰۰۰ تن کلینکر در روز",
+      "operatingHoursPerYear": 7920,
+      "installedElectricalPowerKw": 3400,
+      "installedThermalGjH": 245.0,
+      "primaryCarrier": "سوخت حرارتی اصلی (گاز طبیعی / مازوت) + برق ۶.۳ و ۰.۴ کیلوولت",
+      "defaultSecBenchmark": 885.0,
+      "secUnit": "kcal/kg.clinker",
+      "feeders": ["ایستگاه گاز تقلیل فشار CGS کارخانه", "خط تغذیه سوخت مایع و پمپ‌خانه مازوت", "پست برق کوره و کولر"],
+      "typicalEquipments": [
+        { "tag": "431.KL.010", "name": "مشعل اصلی چندکاناله کوره دوار", "type": "سیستم احتراق حرارتی", "powerKw": 75, "thermalCapacityGjH": 210, "operatingTempC": 1450, "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "441.FN.201-206", "name": "مجموعه فن‌های خنک‌کن کلینکر (۶ دستگاه)", "type": "دمنده‌های گریت کولر", "powerKw": 590, "voltage": "400 V", "capacity": "280000 m³/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "441.FN.590", "name": "فن الکتروفیلتر کولر (EP Fan)", "type": "فن مکنده الکتروفیلتر", "powerKw": 400, "voltage": "6.3 kV", "capacity": "190000 m³/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "431.MD.140", "name": "درایو اصلی چرخش کوره دوار", "type": "محرک کوره", "powerKw": 350, "voltage": "6.3 kV", "capacity": "2000 t/d", "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "351.BE.130", "name": "الواتور باکت ۱۰۰ متری تغذیه کوره", "type": "انتقال عمودی خوراک", "powerKw": 110, "voltage": "400 V", "capacity": "220 t/h", "isSeu": false, "criticality": "بحرانی" }
+      ]
+    },
+    {
+      "code": "Dept 450",
+      "defaultName": "بازیافت حرارت اتلافی (WHR)",
+      "category": "تولید توان الکتریکی از گازهای اتلافی",
+      "nominalCapacity": "۶ مگاوات ساعت برق بازیافتی",
+      "operatingHoursPerYear": 7500,
+      "installedElectricalPowerKw": 120,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "حرارت اتلافی اگزاست (کاهش دیماند برق)",
+      "defaultSecBenchmark": 0.0,
+      "secUnit": "MWh بازیافتی",
+      "feeders": ["اتصال به باسبار اصلی پست ۶۳ کیلوولت کارخانه"],
+      "typicalEquipments": [
+        { "tag": "451.TB.010", "name": "توربوژنراتور بخار راندمان بالا WHR", "type": "مولد برق بازیافتی", "powerKw": 6000, "voltage": "6.3 kV", "capacity": "6 MW", "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "451.PU.030", "name": "پمپ‌های فیدواتر بویلرهای حرارتی", "type": "پمپاژ آب بویلر", "powerKw": 75, "voltage": "400 V", "capacity": "45 m³/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 480",
+      "defaultName": "سیلوها و سالن دپوی کلینکر",
+      "category": "انتقال و نگهداری کلینکر خنک",
+      "nominalCapacity": "۲۵۰ تن در ساعت",
+      "operatingHoursPerYear": 6500,
+      "installedElectricalPowerKw": 320,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار ضعیف ۴۰۰ ولت",
+      "defaultSecBenchmark": 1.1,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق سیلوهای کلینکر"],
+      "typicalEquipments": [
+        { "tag": "481.PC.010", "name": "پن کانوایر انتقال کلینکر کولر به سیلو", "type": "انتقال مکانیکی پیوسته", "powerKw": 55, "voltage": "400 V", "capacity": "250 t/h", "isSeu": true, "criticality": "بحرانی" }
+      ]
+    },
+    {
+      "code": "Dept 500",
+      "defaultName": "آسیای سیمان",
+      "category": "سایش نهایی کلینکر و تولید انواع سیمان",
+      "nominalCapacity": "۱۶۰ تن در ساعت",
+      "operatingHoursPerYear": 5400,
+      "installedElectricalPowerKw": 6200,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار متوسط ۶.۳ کیلوولت (بزرگترین مصرف‌کننده برق)",
+      "defaultSecBenchmark": 38.05,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق مستقل آسیای سیمان با ۲ فیدر اسلیپ‌رینگ ۶.۳ کیلوولت"],
+      "typicalEquipments": [
+        { "tag": "531.BM.010", "name": "موتورهای دوقلوی آسیاب گلوله‌ای (۲ در ۱۴۰۰ کیلووات)", "type": "سایش گلوله‌ای سیمان", "powerKw": 2800, "voltage": "6.3 kV", "capacity": "160 t/h", "isSeu": true, "criticality": "فوق بحرانی" },
+        { "tag": "531.FN.100", "name": "فن سیرکولاسیون مداربسته سپراتور", "type": "فن گردش هوا", "powerKw": 300, "voltage": "6.3 kV", "capacity": "180000 m³/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "531.MC.090", "name": "سپراتور دینامیکی راندمان بالا (VTP 2400)", "type": "جداسازی دانه‌بندی", "powerKw": 160, "voltage": "400 V", "capacity": "160 t/h", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "531.FN.131", "name": "فن بگ‌هاوس خروجی آسیاب سیمان", "type": "فیلتراسیون کیسه‌ای", "powerKw": 90, "voltage": "400 V", "capacity": "95000 m³/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 550",
+      "defaultName": "خشک‌کن و سایش پوزولان / سرباره",
+      "category": "تولید سیمان‌های آمیخته پوزولانی و سرباره‌ای",
+      "nominalCapacity": "۸۰ تن در ساعت",
+      "operatingHoursPerYear": 3600,
+      "installedElectricalPowerKw": 1800,
+      "installedThermalGjH": 45.0,
+      "primaryCarrier": "گاز طبیعی مشعل خشک‌کن + برق آسیاب",
+      "defaultSecBenchmark": 22.0,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق واحد پوزولان"],
+      "typicalEquipments": [
+        { "tag": "551.DR.010", "name": "کوره خشک‌کن دوار پوزولان طبیعی", "type": "خشک‌کن حرارتی", "powerKw": 45, "thermalCapacityGjH": 45, "operatingTempC": 450, "isSeu": true, "criticality": "بحرانی" }
+      ]
+    },
+    {
+      "code": "Dept 600",
+      "defaultName": "بارگیرخانه",
+      "category": "بسته‌بندی، بارگیری فله و کیسه‌ای و تامین هوای فشرده",
+      "nominalCapacity": "۲۴۰ تن در ساعت کیسه و فله",
+      "operatingHoursPerYear": 6000,
+      "installedElectricalPowerKw": 1850,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار ضعیف ۴۰۰ ولت + هوای فشرده ۷.۵ بار",
+      "defaultSecBenchmark": 16.0,
+      "secUnit": "kWh/ton",
+      "feeders": ["پست برق بارگیرخانه", "مرکز توزیع هوای فشرده و کمپرسورخانه"],
+      "typicalEquipments": [
+        { "tag": "611.BL.130", "name": "مجموعه بلوئرهای هوادهی و سیال‌سازی سیلوها", "type": "دمنده‌های سیال‌سازی", "powerKw": 71, "voltage": "400 V", "capacity": "45 m³/min", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "641.PM.050", "name": "ماشین کیسه‌پرکنی روتوپکر ۸ شیره", "type": "بسته‌بندی پاکت", "powerKw": 32.75, "voltage": "400 V", "capacity": "120 t/h", "isSeu": false, "criticality": "عادی" },
+        { "tag": "641.FN.161", "name": "فن غبارگیر روتوپکر", "type": "غبارگیر بسته‌بندی", "powerKw": 30, "voltage": "400 V", "capacity": "25000 m³/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    },
+    {
+      "code": "Dept 700",
+      "defaultName": "تاسیسات و کمپرسورخانه مرکزی",
+      "category": "تولید هوای فشرده و آبرسانی صنعتی",
+      "nominalCapacity": "۱۵۰ مترمکعب در دقیقه هوای فشرده",
+      "operatingHoursPerYear": 8000,
+      "installedElectricalPowerKw": 1200,
+      "installedThermalGjH": 0,
+      "primaryCarrier": "برق فشار ضعیف و متوسط",
+      "defaultSecBenchmark": 0.12,
+      "secUnit": "kWh/Nm³ هوای فشرده",
+      "feeders": ["پست برق یوتیلیتی و ترانس اختصاصی کمپرسورخانه"],
+      "typicalEquipments": [
+        { "tag": "711.CP.010-040", "name": "کمپرسورهای اسکرو اویل‌فری ۷.۵ بار (۴ دستگاه)", "type": "تولید هوای فشرده", "powerKw": 250, "voltage": "400 V", "capacity": "42 m³/min", "isSeu": true, "criticality": "بحرانی" },
+        { "tag": "721.PU.010", "name": "پمپ‌های آبرسانی برج خنک‌کننده کارخانه", "type": "پمپاژ آب خنک‌کن", "powerKw": 75, "voltage": "400 V", "capacity": "180 m³/h", "isSeu": false, "criticality": "عادی" }
+      ]
+    }
+  ]
+}

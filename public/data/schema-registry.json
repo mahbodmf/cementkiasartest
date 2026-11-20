@@ -1,0 +1,164 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "registryVersion": "2.4.0",
+  "standard": "ISO 50001:2018",
+  "primaryKeyGlobal": "dateKey",
+  "dateKeyFormat": "YYYY/MM/DD",
+  "calendarType": "Jalali (Solar Hijri - تقویم خورشیدی)",
+  "datasets": {
+    "electrical-energy": {
+      "id": "electrical-energy",
+      "title": "مصرف انرژی الکتریکی دپارتمان‌ها و ترانس‌ها",
+      "description": "گزارش روزانه کیلووات‌ساعت مصرفی سنگ‌شکن، آسیاب مواد خام، کوره، خنک‌کن، آسیاب سیمان و مجموع کارخانه",
+      "filePath": "/data/electrical-energy.json",
+      "primaryKey": "dateKey",
+      "indexedFields": ["dateKey", "year", "month"],
+      "updateFrequency": "Daily",
+      "unit": "kWh",
+      "schema": {
+        "dateKey": { "type": "string", "example": "1405/06/28", "description": "تاریخ خورشیدی YYYY/MM/DD" },
+        "year": { "type": "number", "example": 1405 },
+        "month": { "type": "number", "example": 6 },
+        "Crusher_Total_kWh": { "type": "number", "description": "سنگ‌شکن فکی و چکشی" },
+        "RawMill_Total_kWh": { "type": "number", "description": "آسیاب مواد خام گلوله‌ای و عمودی" },
+        "Kiln_Total_kWh": { "type": "number", "description": "کوره دوار پخت، پری‌هیتر و گریت کولر" },
+        "CementMill_Total_kWh": { "type": "number", "description": "آسیاب‌های سیمان خطوط ۱ و ۲" },
+        "Factory_Total_kWh": { "type": "number", "description": "مجموع توان اکتیو کارخانه" }
+      },
+      "joins": [
+        { "targetDataset": "enpi-performance", "on": "dateKey", "relationship": "one-to-one" },
+        { "targetDataset": "production-operations", "on": "dateKey", "relationship": "one-to-one" }
+      ]
+    },
+    "enpi-performance": {
+      "id": "enpi-performance",
+      "title": "شاخص‌های عملکرد انرژی (EnPI) و انحرافات تجمعی CUSUM",
+      "description": "پایش مصرف ویژه برق، مصرف ویژه حرارتی کوره، گاز طبیعی، انحرافات از خط مبنا و نمودار CUSUM",
+      "filePath": "/data/enpi-performance.json",
+      "primaryKey": "dateKey",
+      "indexedFields": ["dateKey", "year", "month"],
+      "updateFrequency": "Daily",
+      "schema": {
+        "dateKey": { "type": "string", "example": "1405/06/28" },
+        "year": { "type": "number", "example": 1405 },
+        "month": { "type": "number", "example": 6 },
+        "MonthName": { "type": "string", "example": "شهریور" },
+        "SEC_Electric_Actual": { "type": "number", "unit": "kWh/t", "description": "مصرف ویژه برق واقعی" },
+        "SEC_Electric_Target": { "type": "number", "unit": "kWh/t", "default": 104.0, "description": "خط مبنای هدف برق" },
+        "SEC_Thermal_Actual": { "type": "number", "unit": "kcal/kg.cl", "description": "مصرف ویژه حرارتی واقعی کلینکر" },
+        "SEC_Thermal_Target": { "type": "number", "unit": "kcal/kg.cl", "default": 888.0, "description": "خط مبنای هدف حرارت" },
+        "Natural_Gas_Nm3": { "type": "number", "unit": "Nm³", "description": "گاز طبیعی مصرفی ایستگاه CGS" },
+        "Electric_Deviation": { "type": "number", "unit": "kWh/t", "description": "انحراف روزانه برق از هدف" },
+        "Thermal_Deviation": { "type": "number", "unit": "kcal/kg.cl", "description": "انحراف روزانه حرارتی از هدف" },
+        "CUSUM_Electric": { "type": "number", "unit": "kWh/t", "description": "مجموع تجمعی انحرافات برق" },
+        "CUSUM_Thermal": { "type": "number", "unit": "kcal/kg.cl", "description": "مجموع تجمعی انحرافات حرارتی" }
+      },
+      "joins": [
+        { "targetDataset": "electrical-energy", "on": "dateKey", "relationship": "one-to-one" },
+        { "targetDataset": "production-operations", "on": "dateKey", "relationship": "one-to-one" }
+      ]
+    },
+    "production-operations": {
+      "id": "production-operations",
+      "title": "عملیات تولید، کارکرد و ساعات توقف خطوط",
+      "description": "ساعات کارکرد و توقف کوره و آسیاب سیمان، تولید کلینکر و سیمان، علت و دسته‌بندی توقفات",
+      "filePath": "/data/production-operations.json",
+      "primaryKey": "dateKey",
+      "indexedFields": ["dateKey", "year", "month", "Department", "Stop_Category"],
+      "updateFrequency": "Daily",
+      "schema": {
+        "dateKey": { "type": "string", "example": "1405/06/28" },
+        "year": { "type": "number", "example": 1405 },
+        "month": { "type": "number", "example": 6 },
+        "Kiln_Run_Hours": { "type": "number", "unit": "h", "description": "ساعت کارکرد کوره" },
+        "Kiln_Stop_Hours": { "type": "number", "unit": "h", "description": "ساعت توقف کوره" },
+        "CementMill_Run_Hours": { "type": "number", "unit": "h", "description": "ساعت کارکرد آسیاب سیمان" },
+        "CementMill_Stop_Hours": { "type": "number", "unit": "h", "description": "ساعت توقف آسیاب سیمان" },
+        "Clinker_Prod_ton": { "type": "number", "unit": "ton", "description": "تولید روزانه کلینکر" },
+        "Cement_Prod_ton": { "type": "number", "unit": "ton", "description": "تولید روزانه سیمان" },
+        "Department": { "type": "string", "description": "واحد درگیر توقف" },
+        "Stop_Reason": { "type": "string", "description": "شرح علت فنی یا اضطراری توقف" },
+        "Stop_Category": { "type": "string", "enum": ["محدودیت برق", "عیوب مکانیکی", "عیوب برقی", "خطاهای فرایندی و نوار", "تعمیرات دوره‌ای", "عادی"] },
+        "Downtime_Duration_Hours": { "type": "number", "unit": "h" }
+      },
+      "joins": [
+        { "targetDataset": "enpi-performance", "on": "dateKey", "relationship": "one-to-one" },
+        { "targetDataset": "inventory-silos", "on": "dateKey", "relationship": "one-to-one" }
+      ]
+    },
+    "dispatch-sales": {
+      "id": "dispatch-sales",
+      "title": "دیسپاچینگ، تحویل فله و پاکتی و فروش سیمان",
+      "description": "تناژ بارگیری روزانه سیمان فله و پاکتی تیپ ۲ رده‌های ۴۲.۵ و ۳۲.۵ و مقایسه با تارگت فروش",
+      "filePath": "/data/dispatch-sales.json",
+      "primaryKey": "dateKey",
+      "indexedFields": ["dateKey", "year", "month"],
+      "updateFrequency": "Daily",
+      "unit": "ton",
+      "schema": {
+        "dateKey": { "type": "string", "example": "1405/06/28" },
+        "year": { "type": "number", "example": 1405 },
+        "month": { "type": "number", "example": 6 },
+        "Bulk_Type2_42_5": { "type": "number", "unit": "ton", "description": "سیمان فله تیپ ۲ رده ۴۲.۵" },
+        "Bagged_Type2_42_5": { "type": "number", "unit": "ton", "description": "سیمان پاکتی تیپ ۲ رده ۴۲.۵" },
+        "Bulk_Type2_32_5": { "type": "number", "unit": "ton", "description": "سیمان فله تیپ ۲ رده ۳۲.۵" },
+        "Bagged_Type2_32_5": { "type": "number", "unit": "ton", "description": "سیمان پاکتی تیپ ۲ رده ۳۲.۵" },
+        "Dispatch_Total": { "type": "number", "unit": "ton", "description": "مجموع تحویل و بارگیری روزانه" },
+        "Daily_Target": { "type": "number", "unit": "ton", "default": 4500.0, "description": "هدف فروش روزانه" }
+      },
+      "joins": [
+        { "targetDataset": "inventory-silos", "on": "dateKey", "relationship": "one-to-one" }
+      ]
+    },
+    "inventory-silos": {
+      "id": "inventory-silos",
+      "title": "موجودی درصدی سیلوها و ذخایر دپوی کلینکر",
+      "description": "پایش درصدی ظرفیت سیلوی مواد خام، سیلوی کلینکر، سیلوهای سیمان و تناژ دپوی باز کلینکر",
+      "filePath": "/data/inventory-silos.json",
+      "primaryKey": "dateKey",
+      "indexedFields": ["dateKey", "year", "month"],
+      "updateFrequency": "Daily",
+      "schema": {
+        "dateKey": { "type": "string", "example": "1405/06/28" },
+        "year": { "type": "number", "example": 1405 },
+        "month": { "type": "number", "example": 6 },
+        "Raw_Meal_Silo_Pct": { "type": "number", "unit": "%", "description": "درصد موجودی سیلوی همگن مواد خام" },
+        "Clinker_Main_Silo_Pct": { "type": "number", "unit": "%", "description": "درصد موجودی سیلوی ۴۰ هزار تنی کلینکر" },
+        "Cement_Silo_1_Pct": { "type": "number", "unit": "%", "description": "درصد موجودی سیلوی سیمان ۱" },
+        "Cement_Silo_2_Pct": { "type": "number", "unit": "%", "description": "درصد موجودی سیلوی سیمان ۲" },
+        "Clinker_Depot_Stock_ton": { "type": "number", "unit": "ton", "description": "موجودی دپوی باز کلینکر (حد ایمن: ۳۰,۰۰۰ تن)" }
+      },
+      "joins": [
+        { "targetDataset": "dispatch-sales", "on": "dateKey", "relationship": "one-to-one" },
+        { "targetDataset": "production-operations", "on": "dateKey", "relationship": "one-to-one" }
+      ]
+    },
+    "organization-context": {
+      "id": "organization-context",
+      "title": "بافت سازمان، محدوده و مرزها و انتظارات ذینفعان (بند ۴ ISO 50001)",
+      "description": "مرزهای فیزیکی، حامل‌های انرژی، تحلیل SWOT مسائل درون/برون سازمانی و جدول ذینفعان",
+      "filePath": "/data/organization-context.json",
+      "primaryKey": "id",
+      "updateFrequency": "Semi-static (Annual / Strategic Review)",
+      "schema": {
+        "scopeBoundary": { "type": "object", "description": "محدوده فیزیکی، تأسیسات، حامل‌های انرژی و استثنائات" },
+        "swotIssues": { "type": "array", "description": "ماتریس نقاط قوت، ضعف، فرصت‌ها و تهدیدات انرژی" },
+        "interestedParties": { "type": "array", "description": "جدول نیازمندی‌ها و الزامات قانونی ذینفعان" }
+      },
+      "joins": []
+    },
+    "seu-registry": {
+      "id": "seu-registry",
+      "title": "شناسنامه مصارف بارز انرژی (SEUs) و فرصت‌های بهبود (EnOPs)",
+      "description": "فهرست و مشخصات فنی تجهیزات بارز انرژی، توان نامی، حامل مصرفی و ماتریس پروژه‌های اقدام",
+      "filePath": "/data/seu-registry.json",
+      "primaryKey": "id",
+      "updateFrequency": "Monthly / Periodic Review (Clause 6.3)",
+      "schema": {
+        "seuRegistry": { "type": "array", "description": "شناسنامه تجهیزات بارز، تگ، توان، متغیرهای مؤثر و وضعیت" },
+        "actionPlans": { "type": "array", "description": "ماتریس پروژه‌های بهبود EnOPs، پیشرفت فیزیکی و صرفه‌جویی" }
+      },
+      "joins": []
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "target_thermal_kcal_kg": 888.0,
+  "target_electric_kwh_ton": 104.0,
+  "clinker_depot_min_safe_stock_ton": 30000.0,
+  "daily_dispatch_target_ton": 4500.0,
+  "kiln_availability_target_pct": 85.0,
+  "tolerance_electric_pct": 5.0,
+  "tolerance_thermal_pct": 5.0,
+  "units": {
+    "electric": "kWh/t",
+    "thermal": "kcal/kg.cl",
+    "gas": "Nm³",
+    "mass": "تن",
+    "percent": "٪",
+    "power": "kW"
+  },
+  "critical_alert_thresholds": {
+    "electric_high_kwh_ton": 112.0,
+    "thermal_high_kcal_kg": 925.0,
+    "silo_critical_high_pct": 92.0,
+    "silo_critical_low_pct": 20.0
+  },
+  "department_electric_benchmarks": {
+    "crusher": { "name": "سنگ‌شکن", "benchmark_kwh_ton": 2.2, "share_pct": 2.3 },
+    "rawMill": { "name": "آسیاب مواد خام", "benchmark_kwh_ton": 24.5, "share_pct": 23.8 },
+    "kiln": { "name": "کوره پخت و خنک‌کن", "benchmark_kwh_ton": 22.8, "share_pct": 22.1 },
+    "cementMill": { "name": "آسیاب‌های سیمان", "benchmark_kwh_ton": 38.5, "share_pct": 37.4 },
+    "packingUtilities": { "name": "بارگیرخانه و تأسیسات جانبی", "benchmark_kwh_ton": 16.0, "share_pct": 14.4 }
+  }
+}
